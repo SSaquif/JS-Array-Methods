@@ -13,14 +13,12 @@ const pokeCenterHeal = (currentItem, index, originalArray) => {
         currentItem.currentHP = currentItem.maxHP;
         currentItem.fainted = false;
     }
-    // I Put a return here to show that, returns on forEach are useless
-    // Uncomment to see it does nothing
-    //return currentItem;
+    return currentItem;
 }
 
 //Issue: Say this was a game and the game should autosave and store a COPY of your current team status
 // So that as you keep playing the game, and things go wrong you can power off and come back to that good spot
 const autoSave = pokeTeam.forEach(pokeCenterHeal);
 
-console.log('pokeTeam',pokeTeam);
-console.log('save-file',autoSave);
+console.log('pokeTeam:\n',pokeTeam);
+console.log('save-file:',autoSave);

@@ -23,4 +23,4 @@ const pokeCenterHeal = (currentItem, index, originalArray) => {
 
 const autoSave = pokeTeam.map(pokeCenterHeal);
 
-console.log('save-file',autoSave);
+console.log('save-file:',autoSave);

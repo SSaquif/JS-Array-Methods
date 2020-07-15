@@ -21,7 +21,7 @@ objectsArray.forEach((currentItem, index, originalArray)=>{
 
 // LESSON: objectsArray[i] = currentItem 
 
-// 3. Take a step back: Array of Objects vs Array of Strings (or numbers, booleans)
+// 3. Looping An Array of Strings
 stringsArray.forEach((currentItem, index, originalArray)=>{
     console.log(currentItem);
 })
@@ -36,6 +36,7 @@ stringsArray.forEach((currentItem, index, originalArray)=>{
 const itemLogger = (currentItem, index, originalArray) => {
     console.log(currentItem)
 }
+
 stringsArray.forEach(itemLogger);
 objectsArray.forEach(itemLogger);
 
