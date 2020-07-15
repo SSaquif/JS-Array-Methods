@@ -6,16 +6,16 @@ This repo is to be additional resource to help students understand array methods
 
 ## Common Issues and Confusion
 
-    1. Using array methods on arrays which contain objects rather than strings, numbers and booleans only, seem to cause a lot more issues and confusion
+    1. Using array methods on arrays which contain objects rather than strings, numbers and booleans only, 
+       seem to cause a lot more issues and confusion
     
-    2. Understanding __The callback function__ and the __arguments it accepts__
+    2. Understanding **The callback function__ and the __arguments it accepts__
 
     3. To return or not to return
     
 
 
 ## Our Code Setup
-
 ```javascript
 let objectArray = [
     { name: "mudkip", pType: "water", sType: null, currentHP: 100, totalHP: 100, fainted: false },
@@ -27,3 +27,14 @@ let objectArray = [
 ];
 ```
 ## forEach() Signature & Some Basic Looping/Iteration 
+
+> callbackFunction(currentItem, index, array)
+
+> objectArray[i] = currentItem
+
+## Map 
+// No return statement
+// Things still work
+## Improvements with Map
+// Example - healing function
+// switching to let pokeTeam
