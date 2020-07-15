@@ -15,13 +15,14 @@ First I want to point out some of the common issues that I see when someone is l
     2. > The function that goes inside the HOF is called the callback function
     3. > This HOF basically starts a loop, to loop over each item (which could be an object, string, boolean, number or even another array etc)
     4. > The callback function then operates on each of this items once. So if there are 5 items, the callback function will run 5 times
-    5. > The callback function usually has a recurring signaure (discussed below)
+    5. > The callback functions usually has a recurring signaure (discussed below)
 
 3. To return or not to return. (Missing return statements)
 
 
 ## Our Code Setup
 
+For our code I am using the following array of objects (a team of 6 pokemon). 
 
 ```javascript
 let objectArray = [
@@ -34,11 +35,34 @@ let objectArray = [
 ];
 ```
 
+## Array Methods VS For Loops
+
+> Array Methods are basically Loops. So lets comapre them with your everday for Loop
+
+[For Loop](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L12)
+```javascript
+for (let i=0; i<objectsArray.length; i++){
+    console.log(objectsArray[i]);
+}
+```
+[Array Method (forEach)](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L17)
+```
+objectsArray.forEach((currentItem, index, originalArray)=>{
+    console.log(currentItem);
+})
+```
+
 ## forEach() Signature & Some Basic Looping/Iteration 
 
 > callbackFunction(currentItem, index, array)
 
 > objectArray[i] = currentItem
+
+| currentItem  | index   | originalArray  |
+|--------------|---------|----------------|
+|   |   |   |
+|   |   |   |
+|   |   |   |
 
 ## Map 
 // No return statement
