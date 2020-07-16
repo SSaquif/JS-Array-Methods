@@ -1,5 +1,17 @@
 # Array Methods in JS
 
+## Contents
+- [Intro](##Intro)
+- [Common Issues and Confusion](##Common-Issues-and-Confusion)
+- [Our Code Setup](##Our-Code-Setup)
+- [Array Methods VS For Loops](##Array-Methods-VS-For-Loops)
+- [Define The Callback Function Outside of our HOF (ie Array Methods)](##Define-The-Callback-Function-Outside-of-our-HOF-(ie-Array-Methods))
+- [Basic Looping/Iteration](##Basic-Looping/Iteration )
+- [When not to use forEach()](##When-not-to-use-forEach())
+- [Solving Our Issue with Map()](##Solving-Our-Issue-with-Map())
+- [Find() and Filter()](##Find()-and-Filter())
+- [Reduce() (Stretch)](##Reduce()-(Stretch))
+
 ## Intro
 
 This repo is to be additional resource to help students understand array methods in JS. I will provide example of some common issues that pop up while learning these methods. We will then go over the signature of the some of the most commonly used functions
@@ -72,12 +84,12 @@ After comparing this two code snippets I want you to take away the following thi
     1. > **i === index**
     1. > **objectArray[i] === currentItem**
 
-## Before We Proceed: We Can Define The Callback Function outside
+## Define The Callback Function Outside of our HOF (ie Array Methods)
 
-It is import to understand any callback function can be defined outside of the Array method istself and then itsimply needs to be passed as an argument to the Array method. This holds true for all callback functions (Not just the ones for array method).
+Before we proceed, it is import to understand any callback function can be defined outside of the Array method istself and then itsimply needs to be passed as an argument to the Array method. This holds true for all callback functions (Not just the ones for array method).
 
-[Defining it outside](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L36)
-[Passing it as an argument to our HOF](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L40)
+1. [First Defining it Outside,](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L36)
+2. [Then Passing it as an Argument to our HOF](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L40)
 
 
 ## Basic Looping/Iteration 
