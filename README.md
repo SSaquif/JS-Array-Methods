@@ -97,7 +97,7 @@ Before we proceed, it is import to understand that any callback function can be 
 When using these methods, most people first struggle when we have an array of objects instead of an array of some primitive type. So I added an [array of strings](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L1) to go over the difference
 
 ```javascript
-let stringsArray = ["mudkip","bulbasaur","pikachu","pidgey","squirtle","charizard"];
+let stringsArray = ["mudkip","bulbasaur","pikachu","squirtle","pidgey","charizard"];
 ```
 
 [I loop over this array using a forEach()](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L24), (but this is valid for all array methods we have seen so far). In the table below I have broken down what value each parameter holds, at every iteration.
