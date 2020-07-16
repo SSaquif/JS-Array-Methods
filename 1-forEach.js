@@ -31,8 +31,8 @@ stringsArray.forEach((currentItem, index, originalArray)=>{
 // LESSON: The type of currentItem can be anything. Most times, it's some kind of an object. So treat it like one. (Access properties, Call Methods etc)
 // Draw A Table Maybe
 
-// 4. Detour: Writing the callback function outside
 
+// 4. Detour: Writing the callback function outside
 const itemLogger = (currentItem, index, originalArray) => {
     console.log(currentItem)
 }

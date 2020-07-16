@@ -16,12 +16,16 @@ const pokeTeam = [
 
 const teamSummary = pokeTeam.reduce((accumulator,currentItem,index,originalArray)=>{ 
 
+    //add one to total number of pokemon in my team
     accumulator.numberOfPokemon += 1;    
     
+    //check if the current pokemon has fainted
     if(currentItem.fainted){
         accumulator.totalFainted +=1;
     }
 
+    //setting up an allTypes array, 
+    //to show how many of each type is in my team     
     if(accumulator.allTypes[currentItem.pType]){
         accumulator.allTypes[currentItem.pType] += 1
     } else {
@@ -34,6 +38,10 @@ const teamSummary = pokeTeam.reduce((accumulator,currentItem,index,originalArray
         accumulator.allTypes[currentItem.sType] = 1
     }
 
+    //When we are at the last iteration of the loop
+    //check the allTpes object in my accumulator
+    //return the most common occuring types in an array
+    //called most common types  
     if(index === originalArray.length - 1){
         let types = Object.keys(accumulator.allTypes)
         let frequency = Object.values(accumulator.allTypes)

@@ -7,21 +7,23 @@ const pokeTeam = [
     { name: "charizard", pType: "fire", sType: "flying", currentHP: 0, maxHP: 300, fainted: true },
 ];
 
-// I want only the flying types
+
+// I want the first flying type in my team
 // Once again same signature
-
-const flyingTypes = pokeTeam.filter((currentItem, index, originalArray )=>{
-    if( currentItem.pType==='flying' || currentItem.sType==='flying' ){
-        return currentItem
-    }
-})
-
 const firstFlyingType = pokeTeam.find((currentItem, index, originalArray )=>{
     if( currentItem.pType==='flying' || currentItem.sType==='flying' ){
         return currentItem
     }
 })
 
+// Now I want all the flying types
+// Once again same signature
+const flyingTypes = pokeTeam.filter((currentItem, index, originalArray )=>{
+    if( currentItem.pType==='flying' || currentItem.sType==='flying' ){
+        return currentItem
+    }
+})
 
+
+console.log('The First Flying Type in My Team\n',firstFlyingType,'\n')
 console.log('ALL Flying Types in My Team\n',flyingTypes,'\n')
-console.log('The First Flying Types in My Team\n',firstFlyingType,'\n')

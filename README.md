@@ -6,6 +6,7 @@ This repo is to be additional resource to help students understand array methods
 
 > There are links in this readme file that should take you to the appropriate sections in the code
 
+
 ## Common Issues and Confusion
 
 First I want to point out some of the common issues that I see when someone is learning to use these array methods.
@@ -38,8 +39,9 @@ let objectArray = [
 ];
 ```
 
-> **NOTE**: For callback functions (of all the array methods I have used in this repo), I have intentionally kept all the parameters (required once and the optional once), even if I am not using them. So that you get familiar with the syntax/signature 
+> **NOTE:** For callback functions (of all the array methods I have used in this repo), I have intentionally kept all the parameters (required once and the optional once), even if I am not using them. So that you get familiar with the syntax/signature 
 
+> **TODO:** Go inside each file and at least see what the callback functions looks like. You will quickly spot a common pattern
 
 ## Array Methods VS For Loops
 
@@ -69,6 +71,13 @@ After comparing this two code snippets I want you to take away the following thi
 2. **Take Away 2**: If you compare the **for()** and **forEach()** functions, you will see that the following are equivalent for for() and forEach() respectively
     1. > **i === index**
     1. > **objectArray[i] === currentItem**
+
+## Before We Proceed: We Can Define The Callback Function outside
+
+It is import to understand any callback function can be defined outside of the Array method istself and then itsimply needs to be passed as an argument to the Array method. This holds true for all callback functions (Not just the ones for array method).
+
+[Defining it outside](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L36)
+[Passing it as an argument to our HOF](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L40)
 
 
 ## Basic Looping/Iteration 
@@ -151,7 +160,77 @@ save-file: [
 3. > Generally we use Map to change the items inside the original array in some way and the return the altered items in an new array
 
 ## Find() and Filter()
+In both of this functions we provide a test, that evaluates to true or false.<br>In find the first item in the original array tp pass the test is returned.<br>While in filter all the items to pass the test are returned in a new array.
+
+In this code for find(), I am trying to [find the first flying type pokemon in my team](https://github.com/SSaquif/JS-Array-Methods/blob/master/4-FindVSFilter.js#L13). I get the [following result]:(https://github.com/SSaquif/JS-Array-Methods/blob/master/4-FindVSFilter.js#L28)
+
+>NOTE: A single **Object** is returned 
+
+```
+The First Flying Type in My Team
+ {
+  name: 'pidgey',
+  pType: 'flying',
+  sType: 'normal',
+  currentHP: 100,
+  maxHP: 100,
+  fainted: false
+}
+```
+
+Next, I want to find **ALL the flying types**. So I only filter those in, while filtering the rest out [using filter()](https://github.com/SSaquif/JS-Array-Methods/blob/master/4-FindVSFilter.js#L21). [The result]()
+
+>NOTE: **Multiple Objects** are returned **Inside an Array**
+
+```
+ALL Flying Types in My Team
+ [
+  {
+    name: 'pidgey',
+    pType: 'flying',
+    sType: 'normal',
+    currentHP: 100,
+    maxHP: 100,
+    fainted: false
+  },
+  {
+    name: 'charizard',
+    pType: 'fire',
+    sType: 'flying',
+    currentHP: 0,
+    maxHP: 300,
+    fainted: true
+  }
+] 
+```
+
+**Find Summary**
+1. >We want to use find() when we just **want a single item**. 
+2. >Find stops the moment it finds the first item that matches the test
+3. >The item is returned, **but NOT inside an array**. (Unless of course the item itself is an array)
+
+**Filter Summary**
+1. >We want to use filter() when we want all the items (of the original array) that pass a given test.
+2. >The items are **returned in a new array**
+3. >This new array can have the same size as original array (if all items pass the test), else it will be smaller (some items failed the test)  
 
 ## Reduce() (Stretch)
 
-Reduce has an extra parameter, the accumulator
+Reduce has an extra parameter, the accumulator. This is pretty much the magic behind reduce. This accumalator basically accumulates new information at every iteration. And at the end we return this. The function in the reduce file basically prints out a summary of our team status. For now I will not go into too much detail about this. But if you have time take a look and see if you can understand what's going on. It returns a summary like this
+
+```
+{
+  numberOfPokemon: 6,
+  totalFainted: 1,
+  allTypes: {
+    water: 2,
+    grass: 1,
+    poison: 1,
+    electric: 1,
+    flying: 2,
+    normal: 1,
+    fire: 1
+  },
+  mostCommonTypes: [ 'water', 'flying' ]
+}
+```
