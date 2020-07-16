@@ -6,11 +6,11 @@
 - [Our Code Setup](#Our-Code-Setup)
 - [Array Methods VS For Loops](#Array-Methods-VS-For-Loops)
 - [Define The Callback Function Outside of our HOF (ie Array Methods)](#Define-The-Callback-Function-Outside-of-our-HOF-(ie-Array-Methods))
-- [Basic Looping/Iteration](#Basic-Looping/Iteration )
-- [When not to use forEach()](#When-not-to-use-forEach())
-- [Solving Our Issue with Map()](#Solving-Our-Issue-with-Map())
-- [Find() and Filter()](#Find()-and-Filter())
-- [Reduce() (Stretch)](#Reduce()-(Stretch))
+- [Basic Looping/Iteration](#Basic-Looping/Iteration)
+- [When not to use forEach()](#When-not-to-use-forEach)
+- [Solving Our Issue with Map()](#Solving-Our-Issue-with-Map)
+- [Find() and Filter()](#Find-and-Filter)
+- [Reduce() (Stretch)](#Reduce-Stretch)
 
 ## Intro
 
