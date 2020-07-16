@@ -1,4 +1,4 @@
-let stringsArray = ["mudkip","bulbasaur","pikachu","charizard","squirtle","ditto"];
+let stringsArray = ["mudkip","bulbasaur","pikachu","pidgey","squirtle","charizard"];
 
 let objectsArray = [
     { name: "mudkip", pType: "water", sType: null, currentHP: 100, totalHP: 100, fainted: false },
