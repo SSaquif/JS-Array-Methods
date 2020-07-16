@@ -73,7 +73,7 @@ objectsArray.forEach((currentItem, index, originalArray)=>{
 ```
 After comparing this two code snippets I want you to take away the following things. 
 
-1. **Take Away 1**: Pretty much all callback Functions have the following signature
+1. **Take Away 1**: Pretty much all Callback Functions (regarding array methods) have the following signature (or something similar)
     1. > callbackFunction(currentItem, index, originalArray)
     2. > current item is one of the items in the array
     3. > index is the item's position in the array
@@ -86,7 +86,7 @@ After comparing this two code snippets I want you to take away the following thi
 
 ## Define The Callback Function Outside of our HOF (ie Array Methods)
 
-Before we proceed, it is import to understand any callback function can be defined outside of the Array method istself and then itsimply needs to be passed as an argument to the Array method. This holds true for all callback functions (Not just the ones for array method).
+Before we proceed, it is import to understand any callback function can be defined outside of the Array method itself and then it simply needs to be passed as an argument to the Array method. This holds true for all callback functions (Not just the ones for array method).
 
 1. [First Defining it Outside,](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L36)
 2. [Then Passing it as an Argument to our HOF](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L40)
@@ -100,7 +100,7 @@ When using these methods, most people first struggle when we have an array of ob
 let stringsArray = ["mudkip","bulbasaur","pikachu","charizard","squirtle","ditto"];
 ```
 
-[I loop of this array using a forEach()](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L24), (but this is valid for all array methods we have seen so far). In the table below I have broken down what value each parameter holds, at every iteration.
+[I loop over this array using a forEach()](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L24), (but this is valid for all array methods we have seen so far). In the table below I have broken down what value each parameter holds, at every iteration.
 
 |Loop|       currentItem        | index   | originalArray  |
 |----|--------------------------|---------|----------------|
