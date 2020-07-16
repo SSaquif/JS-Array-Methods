@@ -78,7 +78,7 @@ After comparing this two code snippets I want you to take away the following thi
     2. > current item is one of the items in the array
     3. > index is the item's position in the array
     4. > originalArray, is self explanatory (it's the array we are working with)
-    5. > **This 3 parameters CAN BE named anything**, it does not change what they store, which is the currentItem, index and originalArray
+    5. > **These 3 parameters CAN BE named anything**, it does not change what they store, which is the currentItem, index and originalArray
 
 2. **Take Away 2**: If you compare the **for()** and **forEach()** functions, you will see that the following are equivalent for for() and forEach() respectively
     1. > **i === index**
@@ -86,7 +86,7 @@ After comparing this two code snippets I want you to take away the following thi
 
 ## Define The Callback Function Outside of our HOF (ie Array Methods)
 
-Before we proceed, it is import to understand any callback function can be defined outside of the Array method itself and then it simply needs to be passed as an argument to the Array method. This holds true for all callback functions (Not just the ones for array method).
+Before we proceed, it is import to understand that any callback function can be defined outside of the Array method itself and then it simply needs to be passed as an argument to the Array method. This holds true for all callback functions (Not just the ones for array method).
 
 1. [First Defining it Outside,](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L36)
 2. [Then Passing it as an Argument to our HOF](https://github.com/SSaquif/JS-Array-Methods/blob/master/1-forEach.js#L40)
